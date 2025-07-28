@@ -1,10 +1,11 @@
 BlockingTime = {
 	name = "BlockingTime",
 	author = "@Duesentrieb",
-	version = "20250728-1510",
+	version = "20250728-1652",
 	chat = "[Blocking Time]",
 	colorOrange = "|cff7f00",
 	colorWhite = "|cffffff",
+	colorGradient = "|cff7f00",
 	colorEnd = "|r",
 
 	blockingTime = 0,
@@ -112,8 +113,8 @@ function BT:reportBlockStats()
 	local formattedBlockingTime = BT.formatDuration(blockingTimeSeconds)
 	local formattedBlockingPercentage = string.format("%.1f", blockingPercentage)
 
-	local colorGradient = BT.colorHex(string.format("%.0f", blockingPercentage))
-	d(BT.colorOrange .. BT.chat .. BT.colorEnd .. BT.colorWhite .. " Fight Duration: " .. formattedFightDuration .. " - Blocked: " .. formattedBlockingTime .. " - " .. BT.colorEnd .. colorGradient .. formattedBlockingPercentage .. " %" .. BT.colorEnd)
+	BT.colorGradient = BT.colorHex(string.format("%.0f", blockingPercentage))
+	d(BT.colorOrange .. BT.chat .. BT.colorEnd .. BT.colorWhite .. " Fight Duration: " .. formattedFightDuration .. " - Blocked: " .. formattedBlockingTime .. " - " .. BT.colorEnd .. BT.colorGradient .. formattedBlockingPercentage .. " %" .. BT.colorEnd)
 end
 
 
