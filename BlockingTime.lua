@@ -1,7 +1,7 @@
 BlockingTime = {
 	name = "BlockingTime",
 	author = "@Duesentrieb",
-	version = "20250728-1652",
+	version = "20250728-1716",
 	chat = "[Blocking Time]",
 	colorOrange = "|cff7f00",
 	colorWhite = "|cffffff",
